@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Запускаем веб-сервер в фоне, чтобы порт был открыт
+python3 -m http.server 10000 &
+
 # Set non-interactive for timezone
 export DEBIAN_FRONTEND=noninteractive
 ln -fs /usr/share/zoneinfo/Asia/Kathmandu /etc/localtime
