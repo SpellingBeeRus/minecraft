@@ -31,5 +31,5 @@ VOLUME /home/coder/projects
 # Expose the correct port
 EXPOSE $PORT
 
-# Start code-server. It will now look for the password in the $PASSWORD environment variable.
-CMD ["code-server", "--bind-addr", "0.0.0.0:8080"]
+# Start code-server with NO authentication (DANGEROUS for public servers!)
+CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "none"]
